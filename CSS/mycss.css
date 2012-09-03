@@ -1,0 +1,62 @@
+/* 
+セレクタ		:h1
+プロパティ	:color
+値			:red
+*/
+
+h1{
+	color: 	red;
+}
+
+/* ID要素 */
+#main {
+	font-size: 36px;
+}
+
+/* Class要素 */
+.test {
+	font-size: 9px;
+}
+
+/* 複数要素 */
+#main, .test {
+	border: 1px solid #ccc;
+}
+
+p {
+	color: #00ff00;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+
+	line-height: 1.5;
+	text-decoration: underline line-through;	/* 複数指定も可能 */
+	font-style: italic;
+}
+
+/* 背景スタイル */
+body {
+/*	background-color: red; */
+/*	background-image: url('xx.png'); */
+/*	background-repeat: repeat-x; */
+/*	background-position: 10px 10px; */
+/*	background-attechment: fixed; */
+/*	background: url('xx.png') no-repeat top right; */
+}
+
+/* ブロックスタイル  - 罫線、余白 */
+#box1 {
+	background-color:red;
+	width: 50%;
+	height: 50px;
+/*
+	border-bottom-color: green;
+	border-bottom-width: 5px;
+	border-bottom-style: solid; double;  dotted; dashed; inset; outset;
+*/
+	border: green 5px dotted;
+
+	padding: 40px 100px 200px 5px;
+	margin: 40px;
+}
+
