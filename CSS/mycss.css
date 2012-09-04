@@ -9,7 +9,7 @@ h1{
 }
 
 /* ID要素 */
-#main {
+#test {
 	font-size: 36px;
 }
 
@@ -19,7 +19,7 @@ h1{
 }
 
 /* 複数要素 */
-#main, .test {
+#test, .test {
 	border: 1px solid #ccc;
 }
 
@@ -32,6 +32,7 @@ p {
 	line-height: 1.5;
 	text-decoration: underline line-through;	/* 複数指定も可能 */
 	font-style: italic;
+/*	display : none; */
 }
 
 /* 背景スタイル */
@@ -60,3 +61,55 @@ body {
 	margin: 40px;
 }
 
+#header {
+	background-color:red;
+}
+#main {
+	background-color: blue;
+	float :left;
+	width: 300px;
+}
+#sidebar {
+	background-color: yellow;
+	float: left;
+	width: 100px;
+}
+#footer {
+	background-color: green;
+	clear: left;
+}
+
+ul {
+	list-style-type:  square; /*circle; none; */
+	list-style-position: inside; /* outside */
+}
+
+ol {
+	list-style-type:  lower-alpha; /* hiragana; */
+}
+
+li {
+/*	display: inline; */
+}
+
+a {
+	display: inline; /* block; */
+}
+
+.change {
+	cursor: wait; /* move;  pointer; help; */
+}
+
+/*
+ セレクタの指定
+ a, b
+ a b
+ ab
+*/
+#greet >  .person {
+	color : red;
+}
+
+div.person {
+	color:green;
+}
