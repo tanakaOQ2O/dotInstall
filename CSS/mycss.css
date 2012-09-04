@@ -30,7 +30,7 @@ p {
 	text-align: center;
 
 	line-height: 1.5;
-	text-decoration: underline line-through;	/* 複数指定も可能 */
+/*	text-decoration: underline line-through;	/* 複数指定も可能 */ 
 	font-style: italic;
 /*	display : none; */
 }
@@ -112,4 +112,75 @@ a {
 
 div.person {
 	color:green;
+}
+
+
+/* 疑似クラス */
+.person:hover {
+	color: red;
+}
+li:first-child {
+	color:green;
+}
+#onamae:focus {
+	font-weight: bold;
+}
+
+/*
+セレクタの優先準備 
+
+1. あとから書いたほうが優先される
+2. id > class
+3. 詳細に指定したほうが優先される
+4. !important
+*/
+p#id1 {
+	color: yellow;
+}
+#id1 {
+	color: red /* !important */;
+}
+.class1 {
+	color: green;
+}
+
+/* position: static, relative, absolute, fixed */
+#id3 {
+	position: relative; /* 相対的に */
+	left: 30px;
+	top: 30px;
+}
+#id2 {
+	position : relative;
+}
+#free {
+	position: absolute; /* 親要素につく */
+	top : -10px;
+	left : 50px;
+}
+#id1 {
+	position: fixed; /* 固定 */
+	bottom: 0;
+}
+
+/* 要素の重なり　重なった要素の順序を指定できる = z-index  /position:のstatic以外に使える*/
+#id4 {
+	position: relative;
+	left:0;
+	background-color: red;
+	z-index: 2;
+}
+#id5 {
+	position: relative;
+	top : -50px;
+	left:10px;
+	background-color: blue;
+	z-index: 1;
+}
+#id6 {
+	position: relative;
+	top: -100px;
+	left:20px;
+	background-color: green;
+	z-index: 3;
 }
