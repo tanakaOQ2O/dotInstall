@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 Study</title>
+	<style>
+		div{
+			width: 200px;
+			height: 100px;
+			padding: 10px;
+			margin: 30px;
+			background-color: orange;
+			border: 2px solid orangered;
+
+			/* 角丸 */
+/*			border-radius: 10px 20px 30px 40px; */
+/*			border-top-right-radius: 30px; */
+/*			border-radius: 50%; /* まんまる */
+			border-radius: 20%;
+			background-image: url('sample.jpg'); 
+			background-color: rgba(0,0,0,0.7);
+			opacity: 0.7;
+
+			/* 影をつける */
+			box-shadow: 
+				10px 20px 5px rgba(0,0,0,0.3) inset,
+				5px 5px 5px red
+			;
+			text-shadow: 
+				1px 1px 0px white,
+				2px 2px 0px black;
+			font-size:24px;
+			font-weight:bold;
+
+			/* グラデーション */
+/*			background: -webkit-linear-gradient(red 10%, yellow 90%, blue); */
+/*			background: -webkit-linear-gradient(right top, red, blue); */
+			background: -webkit-radial-gradient(top right, circle cover, red 10%, yellow 70%, blue);
+
+		}
+
+		/* 要素の変形 */
+		#test2 {
+/*			-webkit-transform-origin: top left; */
+/*			-webkit-transform: translate(20px, 20px); */
+/*			-webkit-transform: scale(1.2, 1.5);				/* 拡大縮小 */
+/*			-webkit-transform: rotate(45deg);				/* 回転 */
+			-webkit-transform: skew(20deg);			/* 歪み */
+
+		}
+	</style>
+</head>
+<body>
+	<div id="test1">test1</div>
+	<div id="test2">test2</div>
+</body>
+</html>
