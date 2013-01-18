@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>CSS3 Study</title>
 	<style>
+/*
 		div{
 			width: 200px;
 			height: 100px;
@@ -16,12 +17,14 @@
 /*			border-radius: 10px 20px 30px 40px; */
 /*			border-top-right-radius: 30px; */
 /*			border-radius: 50%; /* まんまる */
+/*
 			border-radius: 20%;
 			background-image: url('sample.jpg'); 
 			background-color: rgba(0,0,0,0.7);
 			opacity: 0.7;
 
 			/* 影をつける */
+/*
 			box-shadow: 
 				10px 20px 5px rgba(0,0,0,0.3) inset,
 				5px 5px 5px red
@@ -35,8 +38,39 @@
 			/* グラデーション */
 /*			background: -webkit-linear-gradient(red 10%, yellow 90%, blue); */
 /*			background: -webkit-linear-gradient(right top, red, blue); */
+/*
 			background: -webkit-radial-gradient(top right, circle cover, red 10%, yellow 70%, blue);
 
+		}
+*/
+
+		div {
+			width 100px;
+			height:100px;
+			padding:10px;
+			margin: 30px;
+			background-color:orange;
+			border:2px solid orangered;
+			-webkit-transition: all 1s ease 2s;
+
+			/*
+			animation-name:
+			animation-duration:
+			animation-timing-function:
+			animation-delay:
+			animation-iteration-count:
+			animation-direction:
+			*/
+			-webkit-animation:'animationTest' 1s ease 1s infinite alternate;
+		}
+		@-webkit-keyframes 'animationTest'{
+			0%   {width: 50px; background-color:orange; }
+			50% {width:100px; background-color:green; }
+			100% {width:150px; background-color:orangered; }
+		}
+		div:hover{
+			height: 200px;
+			background-color:red;
 		}
 
 		/* 要素の変形 */
@@ -48,10 +82,50 @@
 			-webkit-transform: skew(20deg);			/* 歪み */
 
 		}
+
+		/*属性の指定*/
+		a[href*="oo"] {
+			color:yellow;
+		}
+
+		/* Divの中の要素で奇数のものを設定する */
+		div *:nth-child(even)
+		{
+			color:red;
+		}
+		div *:last-child
+		{
+			color:green;
+		}
+		/* Divの中のp要素で２番目のものを設定する */
+		div p:nth-of-type(2){
+			color:orange;
+		}
+		div h1:first-of-type{
+			color:blue;
+		}
+
 	</style>
 </head>
 <body>
 	<div id="test1">test1</div>
 	<div id="test2">test2</div>
+
+	<p>
+		<a href="http://dotinstall.com">test1</a><br/>
+		<a href="http://google.com/">test2</a><br/>
+		<a href="http://yahoo.co.jp/">test3</a><br/>
+		<a href="mailto:tanaka415522@gmail.com">test4</a><br/>
+	</p>
+
+	<div>
+		<h1>見出し１</h1>
+		<p>おはよ</p>
+		<p>こんにちは</p>
+		<p>こんばんは</p>
+		<p>おやすみ</p>
+		<h1>見出し２</h1>
+		<p>おはよー</p>
+	</div>
 </body>
 </html>
